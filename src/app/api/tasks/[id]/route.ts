@@ -5,8 +5,9 @@ import { getUserFromRequest } from '@/lib/auth';
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
-) {
+ context: { params: Promise<{ id: string }> }
+) { 
+  const params=await context.params
   try {
     const user = getUserFromRequest(request);
     if (!user) {
@@ -49,8 +50,9 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
-) {
+   context: { params: Promise<{ id: string }> }
+) { 
+  const params=await context.params
   try {
     const user = getUserFromRequest(request);
     if (!user) {

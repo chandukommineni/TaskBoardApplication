@@ -165,7 +165,7 @@ export default function TaskBoard({ boardId, tasks, onTaskUpdate }: TaskBoardPro
 
       {/* Task Statistics */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-white rounded-lg shadow-md border p-4">
+        <div className="bg-white rounded-lg shadow-md  p-4 border-2 border-blue-300">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-gray-600">Total Tasks</p>
@@ -177,7 +177,7 @@ export default function TaskBoard({ boardId, tasks, onTaskUpdate }: TaskBoardPro
           </div>
         </div>
         
-        <div className="bg-white rounded-lg shadow-md border p-4">
+        <div className="bg-white rounded-lg shadow-md p-4 border-2 border-yellow-300">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-gray-600">Pending</p>
@@ -189,7 +189,7 @@ export default function TaskBoard({ boardId, tasks, onTaskUpdate }: TaskBoardPro
           </div>
         </div>
         
-        <div className="bg-white rounded-lg shadow-md border p-4">
+        <div className="bg-white rounded-lg shadow-md p-4 border-2 border-green-300">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-gray-600">Completed</p>
@@ -211,15 +211,19 @@ export default function TaskBoard({ boardId, tasks, onTaskUpdate }: TaskBoardPro
           </p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredTasks.map((task) => (
-            <TaskCard
-              key={task._id}
-              task={task}
-              onUpdate={onTaskUpdate}
-            />
-          ))}
-        </div>
+        <div className='shadow-md py-3 flex flex-col gap-2 px-2 '>
+          <h1 className='font-semibold text-4xl'>Tasks</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            {filteredTasks.map((task) => (
+              <TaskCard
+                key={task._id}
+                task={task}
+                onUpdate={onTaskUpdate}
+              />
+            ))}
+          </div>
+         </div>
       )}
     </div>
   );

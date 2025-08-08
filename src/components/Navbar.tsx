@@ -26,7 +26,7 @@ export default function Navbar({ user }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <img src="./applyo-logo.webp" alt="Logo" className='w-auto h-10'/>
+            <img src="/applyo-logo.webp" alt="Logo" className='w-auto h-10'/>
            
           </div>
 
