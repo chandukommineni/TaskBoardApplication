@@ -90,13 +90,13 @@ export default function DashboardPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex justify-between items-center mb-8">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">My Boards</h1>
+            <h1 className="text-3xl font-bold text-gray-900">My Task Boards</h1>
             <p className="text-gray-600 mt-2">Organize your tasks with custom boards</p>
           </div>
           
           <button
             onClick={() => setIsCreatingBoard(true)}
-            className="flex items-center space-x-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition duration-200 shadow-md"
+            className="flex items-center space-x-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition duration-200 shadow-md cursor-pointer"
           >
             <Plus className="h-5 w-5" />
             <span>New Board</span>
@@ -106,7 +106,7 @@ export default function DashboardPage() {
         {/* Create Board Form */}
         {isCreatingBoard && (
           <div className="bg-white rounded-lg shadow-md border p-6 mb-8">
-            <h2 className="text-xl font-semibold text-gray-800 mb-4">Create New Board</h2>
+            <h2 className="text-xl font-semibold text-gray-800 mb-4 ">Create New Board</h2>
             <form onSubmit={handleCreateBoard} className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -162,7 +162,7 @@ export default function DashboardPage() {
             <p className="text-gray-500 mb-6">Create your first board to start organizing your tasks</p>
             <button
               onClick={() => setIsCreatingBoard(true)}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition duration-200"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition duration-200 cursor-pointer"
             >
               Create Your First Board
             </button>

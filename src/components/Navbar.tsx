@@ -26,7 +26,8 @@ export default function Navbar({ user }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <h1 className="text-xl font-bold text-gray-800">Todo App</h1>
+            <img src="./applyo-logo.webp" alt="Logo" className='w-auto h-10'/>
+           
           </div>
 
           {/* Desktop Menu */}
@@ -68,10 +69,10 @@ export default function Navbar({ user }: NavbarProps) {
             )}
             <button
               onClick={handleLogout}
-              className="flex items-center space-x-2 px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 w-full text-left transition duration-200"
+              className="flex items-center space-x-2 px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 w-full text-left transition duration-200 "
             >
               <LogOut className="h-4 w-4" />
-              <span>Logout</span>
+              <span >Logout</span>
             </button>
           </div>
         )}

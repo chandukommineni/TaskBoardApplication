@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -29,11 +30,14 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-400 to-white">
       <div className="max-w-md w-full bg-white rounded-lg shadow-xl p-8 m-4">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">Todo App</h1>
-          <p className="text-gray-600 mb-8">Organize your tasks with ease</p>
+          <div className='flex items-center justify-center flex-col '>
+             <img src="/applyo-logo.webp" alt="" className='w-auto h-20' />
+          </div>
+
+          <p className="text-gray-600 mb-8 mt-7">Organize your tasks with ease</p>
           
           <div className="space-y-4">
             <Link
