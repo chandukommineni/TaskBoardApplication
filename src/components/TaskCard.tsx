@@ -366,7 +366,7 @@ export default function TaskCard({ task, onUpdate }: TaskCardProps) {
   const isDueToday = task.dueDate && new Date(task.dueDate).toDateString() === new Date().toDateString();
 
   return (
-    <div className={`bg-white rounded-lg shadow-md border-[2px] hover:shadow-lg transition-shadow duration-200 ${
+    <div className={`bg-white rounded-lg shadow-md border-[1px] hover:shadow-lg transition-shadow duration-200 ${
       task.status === 'completed' ? 'opacity-75 border-green-300' : 'border-yellow-300'
     }`}>
       <div className="p-4">
