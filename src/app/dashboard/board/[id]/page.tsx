@@ -18,9 +18,12 @@ export default function BoardDetailPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    checkAuth();
-    fetchBoard();
-    fetchTasks();
+    const fetchAll = async () => {
+    await checkAuth();
+    await Promise.all([fetchBoard(), fetchTasks()]);
+    setLoading(false);
+  };
+  fetchAll();
   }, [boardId]);
 
   const checkAuth = async () => {
